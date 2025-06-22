@@ -8,10 +8,10 @@ import Chocobar from '../../Animations/Chocobar';
 import chocochip from '/chocoChip.svg';
 import chocolatesplashleft from '/barBackSplashLeft.svg';
 import chocolatesplashright from '/barBackSplashRight.svg';
-import BuyChocolate from '../BuyChocolate/BuyChocolate';
 import Menu from '../MenuHighlight/Menu';
 import gsap from 'gsap';
 import { SplitText } from 'gsap/SplitText';
+import Buy from '../BuyChocolate_Icecream/Buy';
 
 gsap.registerPlugin(SplitText);
 
@@ -92,7 +92,8 @@ function Home() {
 
       <HC />
       <Menu />
-      <BuyChocolate />
+      <Buy heading={"Crafted for Chocolate Lovers"} what={"chocolate"} />
+      <Buy heading={"Taste the Frozen Delight"} what={"icecream"} />
     </>
   );
 }

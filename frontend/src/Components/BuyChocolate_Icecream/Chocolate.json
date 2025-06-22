@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Crunchy Delight",
+    "brand": "CocoaBite",
+    "price": 85,
+    "gm": 50,
+    "recommend": true,
+    "new": false
+    ,"image" : "url"
+  },
+  {
+    "name": "Velvet Dark",
+    "brand": "DarkCraft",
+    "price": 120,
+    "gm": 70,
+    "recommend": true,
+    "new": true
+    ,"image" : "url"
+  },
+  {
+    "name": "Milky Swirl",
+    "brand": "SweetNest",
+    "price": 60,
+    "gm": 45,
+    "recommend": false,
+    "new": false
+    ,"image" : "url"
+  },
+  {
+    "name": "Nutty Charm",
+    "brand": "ChocoRush",
+    "price": 95,
+    "gm": 60,
+    "recommend": true,
+    "new": true
+    ,"image" : "url"
+  },
+  {
+    "name": "Berry Bliss",
+    "brand": "FruityBar",
+    "price": 75,
+    "gm": 55,
+    "recommend": false,
+    "new": true
+    ,"image" : "url"
+  },
+  {
+    "name": "Mocha Magic",
+    "brand": "CaffeineCocoa",
+    "price": 110,
+    "gm": 80,
+    "recommend": true,
+    "new": false
+    ,"image" : "url"
+  },
+  {
+    "name": "Hazel Hug",
+    "brand": "NutBar",
+    "price": 105,
+    "gm": 65,
+    "recommend": false,
+    "new": true
+    ,"image" : "url"
+  },
+  {
+    "name": "Minty Melt",
+    "brand": "FreshCoco",
+    "price": 70,
+    "gm": 50,
+    "recommend": true,
+    "new": false
+    ,"image" : "url"
+  },
+  {
+    "name": "Silky Silk",
+    "brand": "MellowMelt",
+    "price": 130,
+    "gm": 90,
+    "recommend": true,
+    "new": true
+    ,"image" : "url"
+  },
+  {
+    "name": "Caramel Snap",
+    "brand": "ToffeeTree",
+    "price": 65,
+    "gm": 40,
+    "recommend": false,
+    "new": false
+    ,"image" : "url"
+  }
+]
