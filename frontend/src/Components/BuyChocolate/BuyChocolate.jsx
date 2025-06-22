@@ -4,7 +4,7 @@ import "./BuyChocolate.css"
 function BuyChocolate() {
   return (
     <div className="mainBuyChocolateDiv background-gr flex">
-        <img src='/chocolateDrop.png' className='chocolateDrop' />
+        {/* <img src='/chocolateDrop.png' className='chocolateDrop' /> */}
     </div>
   )
 }

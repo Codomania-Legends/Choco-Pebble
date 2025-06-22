@@ -29,11 +29,16 @@ function Home() {
             })
             time.to( ".img1-hc" , { opacity : 1, } )
             time.to( ".img2-hc" , { opacity : 1, } )
-            time.to( ".img3-hc" , { opacity : 1, } )
+            time.to( ".img3-hc" , { opacity : 1, rotate : 30 } )
             time.to( ".img4-hc" , { opacity : 1, } )
             time.to( ".img5-hc" , { opacity : 1, } )
             time.to( ".img6-hc" , { opacity : 1, } )
-            time.to( ".img7-hc" , { opacity : 1, } )
+            time.to( ".img7-hc" , { opacity : 1,
+                rotateZ : 360, 
+                duration : 5,
+                ease : "none",
+                repeat : -1,
+            } )
             time.to( ".img8-hc" , { opacity : 1, } )
             const tl1 = gsap.timeline({
                 scrollTrigger: {
@@ -120,7 +125,7 @@ return (
                 <img src="/chocoaSeed1.svg" className='img4-hc' alt="" />
                 <img src="/lightening.svg" className='img5-hc' alt="" />
                 <img src="/chocoaSeed2.svg" className='img6-hc' alt="" />
-                <img src="/flowers.svg" className='img7-hc' alt="" />
+                <img src="/flowers.png" className='img7-hc' alt="" />
                 <img src="/chocoaSeed3.svg" className='img8-hc' alt="" />
                 <div className="text-hc flex">
                     {

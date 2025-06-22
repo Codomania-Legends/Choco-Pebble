@@ -11,7 +11,7 @@
     top: -10px;
 }
 .baksa {
-    height: 94%;
+    height: 95%;
     width: 21.3%;
     box-shadow: 2px 2px 10px #504f4f;
     border-radius: 2em;
@@ -26,11 +26,11 @@
 .door{
     position: absolute;
 }
-.doorleft {
+/* .doorleft1 , .doorleft2 , .doorleft3 {
     top: 0;
-    left: -4px;
+    left: 0px;
 }
-.doorright {
+.doorright1 , .doorright2 , .doorright3 {
     top: 0;
-    right: -15px;
-}
+    right: -10px;
+} */

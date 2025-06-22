@@ -43,12 +43,30 @@
     left: 10%;
 }
 .img3-hc{
-    top: 30%;
+    top: 25%;
     left: 25%;
-    height: 1em;
+    height: 1.2em;
 }
-.img4-hc{}
-.img5-hc{}
-.img6-hc{}
-.img7-hc{}
-.img8-hc{}
+.img4-hc{
+    bottom: 10%;
+    left: 35%;
+}
+.img5-hc{
+    top: 20%;
+    left: 43%;
+    height: 20%;
+}
+.img6-hc{
+    bottom: 5%;
+    left: 60%;
+}
+.img7-hc{
+    top: 30%;
+    left: 65%;
+    height: 1em;
+    aspect-ratio: 1/1;
+}
+.img8-hc{
+    top: 20%;
+    right: 5%;
+}

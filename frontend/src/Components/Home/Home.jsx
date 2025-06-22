@@ -83,7 +83,10 @@ function Home() {
         </div>
 
         <div className="home-button flex">
-          <button className="btn">Scroll Down</button>
+          <button className="btn flex">
+            Scroll Down
+            <i class="fa-solid fa-angles-down"></i>
+          </button>
         </div>
       </main>
 

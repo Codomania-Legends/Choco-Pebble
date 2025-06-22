@@ -16,17 +16,17 @@ function Menu() {
       </div>
       <div className="menu-boxes flex">
         <div className="menuBox1 baksa flex">
-          <img src={doorleft}  className='doorleft door' />
-          <img src={doorright} className='doorright door' />
+          <img src={doorleft}  className='doorleft1 door' />
+          <img src={doorright} className='doorright1 door' />
         </div>
         <div className="menuBox2 baksa">
-          <img src={doorleft}  className='doorleft door' />
-          <img src={doorright} className='doorright door' />
+          <img src={doorleft}  className='doorleft2 door' />
+          <img src={doorright} className='doorright2 door' />
 
         </div>
         <div className="menuBox3 baksa">
-          <img src={doorleft}  className='doorleft door' />
-          <img src={doorright} className='doorright door' />
+          <img src={doorleft}  className='doorleft3 door' />
+          <img src={doorright} className='doorright3 door' />
 
         </div>
       </div>

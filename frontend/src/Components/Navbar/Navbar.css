@@ -24,7 +24,7 @@ section.nav-main-right.flex {
 }
 .nav-main-center.flex {
     height: 100%;
-    width: 50%;
+    width: 30%;
     color: #4D1205;
     justify-content: space-around;
 }

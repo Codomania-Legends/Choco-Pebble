@@ -29,19 +29,29 @@
   opacity: 0;
 }
 .home-button {
-    height: 10vh;
+    height: 20vh;
     width: 100%;
     align-items: start;
 }
 .btn {
-    height: 55%;
-    width: 10%;
     border: none;
     outline: none;
     background-color: #834719;
     color: #ED9742;
     border-radius: 0.5em;
-    box-shadow: 2px 2px 6px #262525;
+    text-shadow: 4px 4px 4px rgb(0 0 0 / 25%);
+    padding: 0.7em 1em;
+    font-family: 'Gabarito';
+    width: 8%;
+    justify-content: space-evenly;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+.btn:hover{
+  background-color: #ED9742;
+  color: #834719;
+  box-shadow: 4px 4px 4px rgb(0 0 0 / 25%);
+  transition: 0.25s;
 }
 .textHomeChocoPebble.flex {
     position: absolute;

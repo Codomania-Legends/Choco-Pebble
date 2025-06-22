@@ -31,8 +31,8 @@ function Chocobar(timeLine) {
                   {
                     height: 420,
                     width: 370,
-                    x : "52%",
-                    y: "-3%",
+                    x : "55%",
+                    y: "-1%",
                     duration : 1,
                     opacity: 1,
                     // onComplete: () => {
@@ -125,7 +125,7 @@ function Chocobar(timeLine) {
                   {
                     height: 290,
                     width: 289,
-                    x : "-77%",
+                    x : "-85%",
                     y : "-35%",
                     duration : 1,
                     opacity: 1,
@@ -163,7 +163,20 @@ function Chocobar(timeLine) {
                     opacity: 1,
                     duration: 1,
                     // scale: 0.2,
-                    rotate: 120
+                    rotate: 120,
+                    onComplete: () => {
+                      gsap.fromTo( ".btn", {
+                        y: 0,
+                        duration: 1,
+                        repeat: Infinity,
+                      },
+                      {
+                        y: 7,
+                        duration: 1,
+                        repeat: Infinity,
+                        yoyo: true
+                      } )
+                    }
                   } )
                 }
             } )
