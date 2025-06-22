@@ -7,6 +7,7 @@
 .chocobars{
   height: 100vh;
 }
+
 .bars{
   position: absolute;
   height: 35%;
@@ -26,4 +27,29 @@
   position: absolute;
   z-index: 2;
   opacity: 0;
+}
+.home-button {
+    height: 10vh;
+    width: 100%;
+    align-items: start;
+}
+.btn {
+    height: 55%;
+    width: 10%;
+    border: none;
+    outline: none;
+    background-color: #834719;
+    color: #ED9742;
+    border-radius: 0.5em;
+    box-shadow: 2px 2px 6px #262525;
+}
+.textHomeChocoPebble.flex {
+    position: absolute;
+    z-index: 5;
+    font-size: xx-large;
+    font-family: Aboreto;
+    color: white;
+}
+.textSpan {
+  font-size: xx-large;
 }

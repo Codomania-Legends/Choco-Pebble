@@ -1,6 +1,6 @@
 import gsap from "gsap"
-function Chocobar() {
-    gsap.fromTo(
+function Chocobar(timeLine) {
+    timeLine.fromTo(
       ".bar-img1",
       {
         x: -350,

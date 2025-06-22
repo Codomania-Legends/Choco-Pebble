@@ -22,3 +22,33 @@
 .text-text-hc{
     color: white;
 }
+.image-hc-of{
+    opacity: 1;
+    height: 100%;
+}
+.image-hc-comma{
+    opacity: 1;
+    height: 1em;
+}
+
+.img1-hc , .img2-hc , .img3-hc , .img4-hc, .img5-hc, .img6-hc, .img7-hc , .img8-hc{
+    position: absolute;
+}
+.img1-hc{
+    top: 5%;
+    left: 2%;
+}
+.img2-hc{
+    bottom: 10%;
+    left: 10%;
+}
+.img3-hc{
+    top: 30%;
+    left: 25%;
+    height: 1em;
+}
+.img4-hc{}
+.img5-hc{}
+.img6-hc{}
+.img7-hc{}
+.img8-hc{}
