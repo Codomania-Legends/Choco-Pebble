@@ -1,0 +1,11 @@
+.page-footer{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(#4B281A 0%, #1A0902 100%);
+
+}
+.splash {
+    height: 100%;
+    opacity: 0.3;
+    rotate: -30deg;
+}

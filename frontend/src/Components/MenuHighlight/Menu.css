@@ -26,11 +26,11 @@
 .door{
     position: absolute;
 }
-/* .doorleft1 , .doorleft2 , .doorleft3 {
-    top: 0;
-    left: 0px;
+.doorleft1 , .doorleft2 , .doorleft3 {
+    top: 0%;
+    left: 0%;
 }
 .doorright1 , .doorright2 , .doorright3 {
-    top: 0;
-    right: -10px;
-} */
+    top: 0%;
+    right: -3%;
+}

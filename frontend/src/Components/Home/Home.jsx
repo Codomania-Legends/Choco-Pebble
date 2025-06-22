@@ -12,6 +12,8 @@ import Menu from '../MenuHighlight/Menu';
 import gsap from 'gsap';
 import { SplitText } from 'gsap/SplitText';
 import Buy from '../BuyChocolate_Icecream/Buy';
+import Discript from '../Discription/Discript';
+import PageFooter from '../PageFooter/PageFooter';
 
 gsap.registerPlugin(SplitText);
 
@@ -94,6 +96,8 @@ function Home() {
       <Menu />
       <Buy heading={"Crafted for Chocolate Lovers"} what={"chocolate"} />
       <Buy heading={"Taste the Frozen Delight"} what={"icecream"} />
+      <Discript/>
+      <PageFooter/>
     </>
   );
 }
