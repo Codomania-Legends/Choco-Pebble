@@ -2,17 +2,17 @@
     height : 100vh;
     width : 300vw;
     background-color: #D6C0B3;
+    overflow: hidden;
 }
-
 .slider-hc{
     position: relative;
     height : 100%;
     width : 100%;
     font-size: 4.5em;
     font-family: "Aboreto";
-    background-image: url("/horizontalBlur.png");
+    /* background-image: url("/horizontalBlur.png");
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 }
 .horizontalBlurBack{
     position: absolute;
