@@ -1,11 +1,23 @@
-.page-footer{
+.page-footer {
     height: 100vh;
     width: 100vw;
     background: linear-gradient(#4B281A 0%, #1A0902 100%);
-
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
 }
-.splash {
+.splashing {
     height: 100%;
     opacity: 0.3;
     rotate: -30deg;
+    position: absolute;
+    z-index: 0;
+}
+.web-name{
+    height: 85%;
+    width: 100%;
+}
+.copyright-support{
+    height: 15%;
+    width: 100%;
 }
