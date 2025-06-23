@@ -10,9 +10,10 @@
     width : 100%;
     font-size: 4.5em;
     font-family: "Aboreto";
-    /* background-image: url("/horizontalBlur.png");
+    background-image: url("/horizontalBlur.png");
     background-size: cover;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat;
+    /* opacity: 0.8; */
 }
 .horizontalBlurBack{
     position: absolute;
@@ -22,6 +23,11 @@
 .text-text-hc{
     color: white;
 }
+/* .text-hc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+} */
 .image-hc-of{
     opacity: 1;
     height: 100%;
@@ -46,6 +52,7 @@
     top: 25%;
     left: 25%;
     height: 1.2em;
+    rotate: 30deg;
 }
 .img4-hc{
     bottom: 10%;

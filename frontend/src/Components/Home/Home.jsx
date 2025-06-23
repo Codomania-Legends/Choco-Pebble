@@ -26,25 +26,25 @@ function Home() {
     Chocobar(timeLine);
 
     // Split the text into characters
-    // const split = SplitText.create(textRef.current, { type: 'chars' });
+    const split = SplitText.create(textRef.current, { type: 'chars' });
 
     // // Animate each character
-    // gsap.set(split.chars, {
-    //   x: () => Math.random() * 300 - 150,
-    //   y: () => Math.random() * 200 - 100,
-    //   rotation: () => Math.random() * 720 - 360,
-    //   opacity: 0,
-    // });
+    gsap.set(split.chars, {
+      x: () => Math.random() * 300 - 150,
+      y: () => Math.random() * 200 - 100,
+      rotation: () => Math.random() * 720 - 360,
+      opacity: 0,
+    });
 
-    // timeLine.to(split.chars, {
-    //   x: 0,
-    //   y: 0,
-    //   rotation: 0,
-    //   opacity: 1,
-    //   duration: 1.5,
-    //   ease: 'expo.out',
-    //   stagger: 0.05,
-    // });
+    timeLine.to(split.chars, {
+      x: 0,
+      y: 0,
+      rotation: 0,
+      opacity: 1,
+      duration: 1.5,
+      ease: 'expo.out',
+      stagger: 0.05,
+    });
   }, []);
 
   return (
@@ -97,7 +97,7 @@ function Home() {
       {/* <Buy heading={"Crafted for Chocolate Lovers"} what={"chocolate"} /> */}
       {/* <Buy heading={"Taste the Frozen Delight"} what={"icecream"} /> */}
       {/* <Discript/> */}
-      <PageFooter/>
+      {/* <PageFooter/> */}
     </>
   );
 }

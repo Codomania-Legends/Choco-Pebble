@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import BackgroundStart from '../../Animations/background'
 import Door from '../../Animations/Door'
 import "./Menu.css"
-import doorleft from "/doorLeft.svg"
-import doorright from "/doorRight.svg"
+import doorleft from "/dooleft.png"
+import doorright from "/doorright.png"
 function Menu() {
     useEffect( () => {
         BackgroundStart(".background-gr")
