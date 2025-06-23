@@ -42,8 +42,25 @@ function PageFooter() {
           </div>
         </div>
         <div className="copyright-support flex">
-          <div className="naming-section flex"></div>
-          <div className="policy-section flex"></div>
+          <div className="naming-section flex">
+            <div className="copyright flex">
+              <span>@CopyRight By Anshul and Vidhi </span>
+            </div>
+            <div className="anshul flex">
+              <span>@Anshul_Vishwakarma</span>
+            </div>
+            <div className="vidhi flex">
+              <span>@Vidhi_Agrawal</span>
+            </div>
+          </div>
+          <div className="policy-section flex">
+            <div className="privacy flex">
+              <span>Privacy Policy</span>
+            </div>
+            <div className="termsandcondition flex">
+              <span>Terms and Conditions </span>
+            </div>
+          </div>
         </div>
     </div>
   )
