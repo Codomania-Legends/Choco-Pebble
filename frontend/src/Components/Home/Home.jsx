@@ -104,8 +104,8 @@ function Home() {
       <HC />
       <Menu />
       <Buy heading={"Crafted for Chocolate Lovers"} what={"chocolate"} />
-      {/* <Buy heading={"Taste the Frozen Delight"} what={"icecream"} /> */}
-      {/* <Discript/> */}
+      <Buy heading={"Taste the Frozen Delight"} what={"icecream"} />
+      <Discript/>
       <PageFooter/>
     </>
   );

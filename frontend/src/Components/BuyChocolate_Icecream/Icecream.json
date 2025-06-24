@@ -6,7 +6,7 @@
     "gm": "100ml",
     "recommend": false,
     "new": false
-    ,"image" : "url"
+    ,"image" : "/buy1.png"
   },
   {
     "name": "Berry Blast",
@@ -15,7 +15,7 @@
     "gm": "2 scoops",
     "recommend": true,
     "new": true
-    ,"image" : "url"
+    ,"image" : "/buy2.png"
   },
   {
     "name": "Choco Lava",
@@ -24,7 +24,7 @@
     "gm": "150ml",
     "recommend": false,
     "new": true
-    ,"image" : "url"
+    ,"image" : "/buy3.png"
   },
   {
     "name": "Minty Cool",
@@ -33,7 +33,7 @@
     "gm": "120ml",
     "recommend": true,
     "new": false
-    ,"image" : "url"
+    ,"image" : "/buy4.png"
   },
   {
     "name": "Tutti Frutti Twist",
@@ -42,7 +42,7 @@
     "gm": "3 scoops",
     "recommend": false,
     "new": true
-    ,"image" : "url"
+    ,"image" : "/buy5.png"
   },
   {
     "name": "Coffee Rush",
@@ -51,7 +51,7 @@
     "gm": "100ml",
     "recommend": true,
     "new": false
-    ,"image" : "url"
+    ,"image" : "/buy6.png"
   },
   {
     "name": "Kesar Magic",
@@ -60,7 +60,7 @@
     "gm": "2 scoops",
     "recommend": false,
     "new": false
-    ,"image" : "url"
+    ,"image" : "/buy7.png"
   },
   {
     "name": "Bubblegum Bliss",
@@ -68,7 +68,7 @@
     "gm": "1 scoop",
     "recommend": false,
     "new": true
-    ,"image" : "url"
+    ,"image" : "/buy8.png"
   },
   {
     "name": "Dark Desire",
@@ -77,7 +77,7 @@
     "gm": "200ml",
     "recommend": true,
     "new": true
-    ,"image" : "url"
+    ,"image" : "/buy1.png"
   },
   {
     "name": "Lemon Zing",
@@ -86,7 +86,7 @@
     "gm": "1 scoop",
     "recommend": true,
     "new": false
-    ,"image" : "url"
+    ,"image" : "/buy2.png"
   }
 ]
 

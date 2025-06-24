@@ -22,24 +22,28 @@ function Buy({heading , what}) {
                                 <div className="buyBlock flex" key={`${v , i}`}>
                                     <div className="blobkbuyDiv flex">
                                         <div className="options-buy flex">
-                                            <div className="recommend-buy">{v.recommend}</div>
-                                            <div className="new-buy">{v.new}</div>
+                                            {v.recommend ? 
+                                                <div className="recommend-buy">Recommend</div>
+                                            : null}
+                                            {v.new ? 
+                                                <div className="new-buy">New</div> 
+                                            : null}
                                         </div>
                                         <img src={v.image} className="buyImage" />
-                                        <div className="namePrice-buy">
+                                        <div className="namePrice-buy flex">
                                             <div className="buyName">{v.name}</div>
-                                            <div className="brandPriceLike-buy">
+                                            <div className="brandPriceLike-buy flex">
                                                 <div className="brandPriceDiv">
-                                                    <div className="brand-buy">{v.brand}</div>
-                                                    <div className="price-buy">{v.price}</div>
+                                                    <div className="brand-buy"><b>{v.brand}</b></div>
+                                                    <div className="price-buy">₹{v.price}/-</div>
                                                 </div>
                                                 <div className="like-buy">
                                                     <i class="fa-solid fa-heart"></i>
                                                 </div>
                                             </div>
-                                            <div className="gmCart">
-                                                <div className="weight">{v.gm}</div>
-                                                <div className="cart">
+                                            <div className="gmCart flex">
+                                                <div className="weight">{v.gm} gm</div>
+                                                <div className="cart-buy">
                                                     <i class="fa-brands fa-opencart"></i>
                                                 </div>
                                             </div>
