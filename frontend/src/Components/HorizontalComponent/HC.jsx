@@ -24,8 +24,9 @@ function HC() {
           trigger: ".container-hc",
           pin: true,
           start: "top top",
-          end: "+=3200",
-          scrub: 2,
+          end: "+=3000", // adjust this value to end exactly before menu starts
+          scrub: 1,
+          anticipatePin: 1,
           toggleActions: "play reset play reset",
           markers: true
         }
@@ -43,7 +44,7 @@ function HC() {
           trigger: ".container-hc",
           start: "top top",
           end : "+=3500",
-            toggleActions: "play reset play reset",
+          toggleActions: "play reset play reset",
         }
       });
       tl1.from( ".slider-hc" , {

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import CHOCOLATE from "./Chocolate.json"
 import ICECREAM from "./Icecream.json"
+import "./Buy.css"
 
 function Buy({heading , what}) {
     const [ data , setData ] = useState([])
-    // what == "chocolate" ? setData(CHOCOLATE) : setData(ICECREAM)
     useEffect( () => {
         setData(ICECREAM)
         if( what == "chocolate" ) setData(CHOCOLATE)
@@ -12,39 +12,43 @@ function Buy({heading , what}) {
     return (
         <>
             <main className="buySection background-gr">
-                <div className="heading-buy">{heading}</div>
-                <section className="mainBuyComponent">
-                    {
-                        data.length != 0 
-                        &&
-                        data.map( (v , i) => (
-                            <div className="buyBlock flex" key={`${v , i}`}>
-                                <div className="options-buy flex">
-                                    <div className="recommend-buy">{v.recommend}</div>
-                                    <div className="new-buy">{v.new}</div>
-                                </div>
-                                <img src={v.image} className="buyImage" />
-                                <div className="namePrice-buy">
-                                    <div className="buyName">{v.name}</div>
-                                    <div className="brandPriceLike-buy">
-                                        <div className="brandPriceDiv">
-                                            <div className="brand-buy">{v.brand}</div>
-                                            <div className="price-buy">{v.price}</div>
+                <section className="mainBuyComponent flex">
+                    <div className="heading-buy flex">{heading}</div>
+                    <div className="componentBuySectionDivs flex">
+                        {
+                            data.length != 0 
+                            &&
+                            data.map( (v , i) => (
+                                <div className="buyBlock flex" key={`${v , i}`}>
+                                    <div className="blobkbuyDiv flex">
+                                        <div className="options-buy flex">
+                                            <div className="recommend-buy">{v.recommend}</div>
+                                            <div className="new-buy">{v.new}</div>
                                         </div>
-                                        <div className="like-buy">
-                                            <i class="fa-solid fa-heart"></i>
+                                        <img src={v.image} className="buyImage" />
+                                        <div className="namePrice-buy">
+                                            <div className="buyName">{v.name}</div>
+                                            <div className="brandPriceLike-buy">
+                                                <div className="brandPriceDiv">
+                                                    <div className="brand-buy">{v.brand}</div>
+                                                    <div className="price-buy">{v.price}</div>
+                                                </div>
+                                                <div className="like-buy">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                </div>
+                                            </div>
+                                            <div className="gmCart">
+                                                <div className="weight">{v.gm}</div>
+                                                <div className="cart">
+                                                    <i class="fa-brands fa-opencart"></i>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="gmCart">
-                                        <div className="weight">{v.gm}</div>
-                                        <div className="cart">
-                                            <i class="fa-brands fa-opencart"></i>
-                                        </div>
-                                    </div>
                                 </div>
-                            </div>
-                        ) )
-                    }
+                            ) )
+                        }
+                    </div>
                 </section>
             </main>
         </>

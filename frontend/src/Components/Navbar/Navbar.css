@@ -55,3 +55,14 @@ section.nav-main-right.flex {
     justify-content: center;
     align-items: end;
 }
+.gsap{
+    cursor: pointer;
+    transition: 0.5s;
+    transform: scale(1);
+}
+
+.gsap:hover{
+    transform: scale(2);
+    text-shadow: 4px 4px 4px #4d120550;
+    transition: 0.5s;
+}

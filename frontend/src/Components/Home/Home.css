@@ -63,3 +63,6 @@
 .textSpan {
   font-size: xx-large;
 }
+.gsap-button{
+  opacity: 0;
+}

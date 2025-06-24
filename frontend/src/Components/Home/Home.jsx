@@ -36,7 +36,7 @@ function Home() {
       opacity: 0,
     });
 
-    timeLine.to(split.chars, {
+    gsap.to(split.chars, {
       x: 0,
       y: 0,
       rotation: 0,
@@ -44,7 +44,16 @@ function Home() {
       duration: 1.5,
       ease: 'expo.out',
       stagger: 0.05,
+      delay : 3
     });
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      ".gsap-button",
+      { opacity: 0, y: -200 },
+      { opacity: 1, y: 0, delay: 4 }
+    );
   }, []);
 
   return (
@@ -85,7 +94,7 @@ function Home() {
         </div>
 
         <div className="home-button flex">
-          <button className="btn flex">
+          <button className="btn flex gsap-button">
             Scroll Down
             <i class="fa-solid fa-angles-down"></i>
           </button>
@@ -94,7 +103,7 @@ function Home() {
 
       <HC />
       <Menu />
-      {/* <Buy heading={"Crafted for Chocolate Lovers"} what={"chocolate"} /> */}
+      <Buy heading={"Crafted for Chocolate Lovers"} what={"chocolate"} />
       {/* <Buy heading={"Taste the Frozen Delight"} what={"icecream"} /> */}
       {/* <Discript/> */}
       {/* <PageFooter/> */}
