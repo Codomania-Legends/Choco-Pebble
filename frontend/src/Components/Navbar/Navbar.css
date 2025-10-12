@@ -5,6 +5,7 @@
     font-family: "Gabarito";
     font-size: small;
     justify-content: space-around;
+    margin: auto;
 }
 
 .nav-main-left, .nav-main-right {
@@ -65,4 +66,7 @@ section.nav-main-right.flex {
     transform: scale(2);
     text-shadow: 4px 4px 4px #4d120550;
     transition: 0.5s;
+}
+.aboutus-navbar{
+    color: white;
 }

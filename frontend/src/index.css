@@ -1,6 +1,7 @@
 *{
   padding: 0;
   margin: 0;
+  font-family: 'Gabarito';
 }
 .flex{
   display: flex;
@@ -22,4 +23,8 @@ body , #root{
     --p : #D6C0B3;
     --s : #D6C0B3;
     background-image: linear-gradient( to bottom , var(--p) , var(--s) ) ;
+}
+button {
+    border: none;
+    outline: none;
 }

@@ -19,6 +19,7 @@ gsap.registerPlugin(SplitText);
 
 function Home() {
   const textRef = useRef();
+  const HR_ref = useRef()
 
   useEffect(() => {
     const timeLine = gsap.timeline()
@@ -94,14 +95,18 @@ function Home() {
         </div>
 
         <div className="home-button flex">
-          <button className="btn flex gsap-button">
+          <button onClick={() => {
+            if(HR_ref.current){
+              HR_ref.current.scrollIntoView({behavior:"smooth"})
+            }
+          }} className="btn flex gsap-button">
             Scroll Down
             <i class="fa-solid fa-angles-down"></i>
           </button>
         </div>
       </main>
 
-      <HC />
+      <HC HR_ref={HR_ref} />
       <Menu />
       <Buy heading={"Crafted for Chocolate Lovers"} what={"chocolate"} />
       <Buy heading={"Taste the Frozen Delight"} what={"icecream"} />

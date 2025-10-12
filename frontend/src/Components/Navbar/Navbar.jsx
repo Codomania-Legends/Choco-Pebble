@@ -3,7 +3,7 @@ import "./Navbar.css"
 import logo from "/logo.png"
 import { useEffect } from 'react'
 import gsap from 'gsap'
-function Navbar() {
+function Navbar({aboutus}) {
   useEffect( () => {
     document.querySelector( ".heart" ).addEventListener( "mouseover" , () => {
       gsap.to( ".heart1" , {
@@ -78,7 +78,24 @@ function Navbar() {
           x:0,y:0,opacity:1
         } )
       } )
-    } )
+    // Cleanup GSAP animations and event listeners when component unmounts or aboutus changes
+    return () => {
+      gsap.killTweensOf(".heart1");
+      gsap.killTweensOf(".heart2");
+      gsap.killTweensOf(".cart");
+      gsap.killTweensOf(".cloud");
+
+      const heart = document.querySelector(".heart");
+      const cart = document.querySelector(".cart");
+
+      if (heart) {
+      heart.replaceWith(heart.cloneNode(true));
+      }
+      if (cart) {
+      cart.replaceWith(cart.cloneNode(true));
+      }
+    };
+    } , [] )
 
   return (
     <>
@@ -95,24 +112,24 @@ function Navbar() {
                 <div className="about-us-text shadow gsap">
                     <span>About Us</span>
                 </div>
-                <div className="products shadow gsap">
+                <div className={`products shadow gsap ${(aboutus) ? "aboutus-navbar" : null}`}>
                     <span>Products</span>
                 </div>
-                <div className="login-signup shadow gsap">
+                <div className={`login-signup shadow gsap ${(aboutus) ? "aboutus-navbar" : null}`}>
                     <span>Login/SignUp</span>
                 </div>
             </section>
             <section className="nav-main-right flex gsap">
                 <div className="shadow home-like flex">
-                      <i className="fa-solid fa-heart heart" ></i>
-                      <i className="fa-solid fa-heart heart1" ></i>
-                      <i className="fa-solid fa-heart heart2" ></i>
+                      <i className={`fa-solid fa-heart heart ${(aboutus) ? "aboutus-navbar" : null}`} ></i>
+                      <i className={`fa-solid fa-heart heart1 ${(aboutus) ? "aboutus-navbar" : null}`} ></i>
+                      <i className={`fa-solid fa-heart heart2 ${(aboutus) ? "aboutus-navbar" : null}`} ></i>
                 </div>
-                <div className="shadow home-cart gsap">
+                <div className={`shadow home-cart gsap ${(aboutus) ? "aboutus-navbar" : null}`}>
                     <i className="fa-brands fa-opencart cart" ></i>
                     <i class="fa-brands fa-cloudversify cloud"></i>
                 </div>
-                <div className="shadow home-dot-menu gsap">
+                <div className={`shadow home-dot-menu gsap ${(aboutus) ? "aboutus-navbar" : null}`}>
                     <span><i className="fa-solid fa-ellipsis-vertical" ></i></span>
                 </div>
             </section>
