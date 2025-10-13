@@ -3,6 +3,7 @@ import "./Navbar.css"
 import logo from "/logo.png"
 import { useEffect } from 'react'
 import gsap from 'gsap'
+import {Link} from "react-router"
 function Navbar({aboutus}) {
   useEffect( () => {
     document.querySelector( ".heart" ).addEventListener( "mouseover" , () => {
@@ -107,10 +108,10 @@ function Navbar({aboutus}) {
             </section>
             <section className="nav-main-center flex">
                 <div className="home-text shadow gsap">
-                    <span>Home</span>
+                    <Link to={"/"}>Home</Link>
                 </div>
                 <div className="about-us-text shadow gsap">
-                    <span>About Us</span>
+                    <Link to="/aboutus">About Us</Link>
                 </div>
                 <div className={`products shadow gsap ${(aboutus) ? "aboutus-navbar" : null}`}>
                     <span>Products</span>
