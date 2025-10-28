@@ -1,106 +1,56 @@
-import React from 'react'
-import "./Navbar.css"
-import logo from "/logo.png"
-import { useEffect } from 'react'
-import gsap from 'gsap'
-import {Link} from "react-router"
-function Navbar({aboutus}) {
-  useEffect( () => {
-    document.querySelector( ".heart" ).addEventListener( "mouseover" , () => {
-      gsap.to( ".heart1" , {
-        y : -10,
-        x : 5,
-        scale : 0.5,
-        rotate : 30,
-        opacity : 1,
-        duration : 1
-      } )
-      gsap.to( ".heart2" , {
-        y : -12,
-        x : -5,
-        scale : 0.7,
-        rotate : -30,
-        opacity : 1,
-        duration : 1
-      } )
-    } )
-    document.querySelector( ".heart" ).addEventListener( "mouseout" , () => {
-      gsap.to( ".heart1" , {
-        y : 0,
-        x : 0,
-        rotate : 0,
-        scale : 1,
-        opacity : 0,
-        duration : 1
-      } )
-      gsap.to( ".heart2" , {
-        y : 0,
-        x : 0,
-        rotate : 0,
-        scale : 1,
-        opacity : 0,
-        duration : 1
-      } )
-    } )
+import React, { useRef, useEffect } from 'react';
+import "./Navbar.css";
+import logo from "/logo.png";
+import gsap from 'gsap';
+import { Link } from "react-router-dom"; // Corrected import
 
-    document.querySelector( ".cart" ).addEventListener( "mouseover", () => {
-      gsap.to( ".cart", {
-          x : 7,
-          duration : 1,
-          opacity : 1,
-        } )
-        gsap.to( ".cloud", {
-          x : -8,
-          duration : 1,
-          opacity : 1,
-          fontSize : "smaller"
-      } )
-    } )
-    document.querySelector( ".cart" ).addEventListener( "mouseout", () => {
-        gsap.to( ".cart", {
-            x : 0,
-            duration : 1,
-            opacity : 1
-        } )
-        gsap.to( ".cloud", {
-          x : 0,
-          duration : 1,
-          opacity : 0,
-        } )
-    } )
-    const navTime = gsap.timeline()
-      document.querySelectorAll( ".gsap").forEach( (each) => {
-        navTime.fromTo( each , {
-          y : -100,
-          opacity : 0,
-          x : -50,
-          duration : 0.05
-        },{
-          x:0,y:0,opacity:1
-        } )
-      } )
-    // Cleanup GSAP animations and event listeners when component unmounts or aboutus changes
-    return () => {
-      gsap.killTweensOf(".heart1");
-      gsap.killTweensOf(".heart2");
-      gsap.killTweensOf(".cart");
-      gsap.killTweensOf(".cloud");
+function Navbar({ aboutus }) {
+    const navRef = useRef(null); // A single ref for the whole navbar
 
-      const heart = document.querySelector(".heart");
-      const cart = document.querySelector(".cart");
+    // Use refs for the specific animation targets
+    const heartRef = useRef(null);
+    const heart1Ref = useRef(null);
+    const heart2Ref = useRef(null);
+    const cartRef = useRef(null);
+    const cloudRef = useRef(null);
 
-      if (heart) {
-      heart.replaceWith(heart.cloneNode(true));
-      }
-      if (cart) {
-      cart.replaceWith(cart.cloneNode(true));
-      }
+    // Animate the nav links on mount
+    // useEffect(() => {
+    //     // Use a single GSAP call with stagger for a cleaner animation
+    //     const ctx = gsap.context(() => {
+    //         // gsap.from(".gsap", {
+    //         //     y: -100,
+    //         //     opacity: 0,
+    //         //     x: -50,
+    //         //     duration: 0.5,
+    //         //     stagger: 0.1, // Stagger the animation for each element with this class
+    //         // });
+    //     }, navRef); // Scope the animation to the navbar
+    //     return () => ctx.revert();
+    // }, []);
+
+    // --- Animation Event Handlers ---
+    const handleHeartEnter = () => {
+        gsap.to(heart1Ref.current, { y: -10, x: 5, scale: 0.5, rotate: 30, opacity: 1, duration: 1 });
+        gsap.to(heart2Ref.current, { y: -12, x: -5, scale: 0.7, rotate: -30, opacity: 1, duration: 1 });
     };
-    } , [] )
 
-  return (
-    <>
-        <nav className="nav-main flex">
+    const handleHeartLeave = () => {
+        gsap.to([heart1Ref.current, heart2Ref.current], { y: 0, x: 0, rotate: 0, scale: 1, opacity: 0, duration: 1 });
+    };
+    
+    const handleCartEnter = () => {
+        gsap.to(cartRef.current, { x: 7, duration: 1 });
+        gsap.to(cloudRef.current, { x: -8, opacity: 1, fontSize: "smaller", duration: 1 });
+    };
+
+    const handleCartLeave = () => {
+        gsap.to(cartRef.current, { x: 0, duration: 1 });
+        gsap.to(cloudRef.current, { x: 0, opacity: 0, duration: 1 });
+    };
+
+    return (
+        <nav ref={navRef} className="nav-main flex">
             <section className="nav-main-left flex">
                 <div className="logo flex gsap">
                     <img src={logo} className='Choco-Pebble-logo shadow' />
@@ -121,22 +71,31 @@ function Navbar({aboutus}) {
                 </div>
             </section>
             <section className="nav-main-right flex gsap">
-                <div className="shadow home-like flex">
-                      <i className={`fa-solid fa-heart heart ${(aboutus) ? "aboutus-navbar" : null}`} ></i>
-                      <i className={`fa-solid fa-heart heart1 ${(aboutus) ? "aboutus-navbar" : null}`} ></i>
-                      <i className={`fa-solid fa-heart heart2 ${(aboutus) ? "aboutus-navbar" : null}`} ></i>
+                <div 
+                    className="shadow home-like flex"
+                    onMouseEnter={handleHeartEnter}
+                    onMouseLeave={handleHeartLeave}
+                >
+                    <i ref={heartRef} className="fa-solid fa-heart heart"></i>
+                    <i ref={heart1Ref} className="fa-solid fa-heart heart1"></i>
+                    <i ref={heart2Ref} className="fa-solid fa-heart heart2"></i>
                 </div>
-                <div className={`shadow home-cart gsap ${(aboutus) ? "aboutus-navbar" : null}`}>
-                    <i className="fa-brands fa-opencart cart" ></i>
-                    <i class="fa-brands fa-cloudversify cloud"></i>
+                <div 
+                    className="shadow home-cart gsap"
+                    onMouseEnter={handleCartEnter}
+                    onMouseLeave={handleCartLeave}
+                >
+                    <i ref={cartRef} className="fa-brands fa-opencart cart"></i>
+                    <i ref={cloudRef} className="fa-brands fa-cloudversify cloud"></i>
                 </div>
                 <div className={`shadow home-dot-menu gsap ${(aboutus) ? "aboutus-navbar" : null}`}>
                     <span><i className="fa-solid fa-ellipsis-vertical" ></i></span>
                 </div>
             </section>
         </nav>
-    </>
-  )
+    );
 }
 
-export default Navbar
+export default Navbar;
+
+// .............................................................

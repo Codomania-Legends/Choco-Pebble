@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import Navbar from '../Navbar/Navbar';
 import './Home.css';
 import BackgroundStart from '../../Animations/background';
 import chocobar from '/chocoBar.svg';
@@ -14,6 +13,7 @@ import { SplitText } from 'gsap/SplitText';
 import Buy from '../BuyChocolate_Icecream/Buy';
 import Discript from '../Discription/Discript';
 import PageFooter from '../PageFooter/PageFooter';
+import Navbar from '../Navbar/Navbar';
 
 gsap.registerPlugin(SplitText);
 

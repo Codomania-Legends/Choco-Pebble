@@ -8,6 +8,11 @@
     margin: auto;
 }
 
+a{
+    text-decoration: none;
+    color: #4D1205;
+}
+
 .nav-main-left, .nav-main-right {
     height: 100%;
     width: 15%;
@@ -63,7 +68,7 @@ section.nav-main-right.flex {
 }
 
 .gsap:hover{
-    transform: scale(2);
+    transform: scale(1.2);
     text-shadow: 4px 4px 4px #4d120550;
     transition: 0.5s;
 }
